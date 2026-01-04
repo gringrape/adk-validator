@@ -16,19 +16,19 @@ from data import question
 
 generator = LlmAgent(
     name="GenerateData",
-    model="gemini-2.5-flash",
+    model="gemini-flash-latest",
     instruction="generate JSON-LD from user input.",
     output_key="result",
 )
 validator = LlmAgent(
     name="ValidateInput",
-    model="gemini-2.5-flash",
+    model="gemini-flash-latest",
     instruction="Validate the {result} is valid JSON-LD",
     output_key="validation_status",
 )
 reporter = LlmAgent(
     name="ReportResult",
-    model="gemini-2.5-flash",
+    model="gemini-flash-latest",
     instruction="Report the result from {result} only if {validation_status} is valid.",
 )
 
