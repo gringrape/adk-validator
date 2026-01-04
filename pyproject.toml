@@ -5,7 +5,7 @@ description = "Default template for PDM package"
 authors = [
     {name = "gringrape", email = "53764714+gringrape@users.noreply.github.com"},
 ]
-dependencies = []
+dependencies = ["google-adk>=1.21.0"]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +13,6 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.scripts]
+start = "python src/main.py"
